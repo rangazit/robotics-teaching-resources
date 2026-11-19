@@ -1,0 +1,1097 @@
+# Online resources for teaching robotics and autonomous systems.
+#
+# One record per resource. A course that is offered in several ways (university lecture pages, a MOOC,
+# a video archive) is ONE record with several `offerings`. Textbooks and software are records of their
+# own; courses point to them with `uses_books` / `uses_software`; the page computes the reverse links
+# ("used by"). Labs and notebooks built for another course point to it with `derived_from`.
+#
+# Availability of each material type:
+#   free     complete and freely available online
+#   partial  some of it is online (some lectures, older years, or only part of the course)
+#   paid     available, but not free (book for sale, paid MOOC certificate track)
+#   none     not available publicly (e.g. only on the university LMS)
+#   unknown  could not be determined
+# `via` names the offering that provides the material.
+#
+# Every entry was checked against its web pages in November 2026 (field `checked`).
+
+groups:
+  - id: course
+    name: University courses
+    description: Courses with public lecture material (slides, notes, videos or assignments).
+  - id: mooc
+    name: MOOCs and short online courses
+    description: Self-paced online courses that are not part of a university course listed above.
+  - id: book
+    name: Textbooks
+    description: Textbooks used by the courses above, and other free or open textbooks.
+  - id: video
+    name: Video lecture series
+    description: Video collections that are not tied to a single course above.
+  - id: labs
+    name: Labs, exercises and notebooks
+    description: Ready-to-use exercises, labs and Jupyter notebooks.
+  - id: learning
+    name: Robot learning, physical AI and embodied AI
+    description: Courses and tutorials on learning-based robotics, and introductions to physical and embodied AI.
+  - id: software
+    name: Simulators and software for teaching
+    description: Simulators, libraries and tools used by the courses above.
+
+topics:
+  architectures: Architectures and behaviours
+  kinematics: Kinematics
+  dynamics: Dynamics
+  control: Control
+  sensors: Sensors
+  perception: Perception and vision
+  estimation: Estimation and filtering
+  localization: Localization
+  slam: Mapping and SLAM
+  planning: Motion planning
+  manipulation: Manipulation
+  aerial: Aerial robots
+  driving: Autonomous driving
+  learning: Robot learning (RL, imitation, foundation models)
+  ros: ROS
+
+resources:
+
+# ============================================================== university courses
+- id: eth-amr
+  short: "ETH AMR"
+  group: course
+  name: Autonomous Mobile Robots
+  institution: ETH Zurich (Autonomous Systems Lab)
+  people: R. Siegwart, M. Chli, M. Hutter, D. Scaramuzza, P. Furgale, M. Rufli et al.
+  level: intro
+  year: 2021
+  topics: [kinematics, sensors, perception, estimation, localization, slam, planning]
+  offerings:
+    - {name: "ETH lecture page, spring 2021", url: "https://asl.ethz.ch/education/lectures/autonomous_mobile_robots/spring-2021.html", year: 2021, cost: free}
+    - {name: "ETH lecture page, spring 2020", url: "https://asl.ethz.ch/education/lectures/autonomous_mobile_robots/spring-2020.html", year: 2020, cost: free}
+    - {name: "edX MOOC AMRx (self-paced)", url: "https://www.edx.org/learn/autonomous-robotics/eth-zurich-autonomous-mobile-robots", year: 2020, cost: free-audit}
+  materials:
+    book: {status: paid, via: "Siegwart, Nourbakhsh, Scaramuzza (2011)"}
+    slides: {status: free, via: "ETH 2020 and 2021 pages; edX"}
+    notes: {status: none}
+    video: {status: free, via: "edX MOOC"}
+    exercises: {status: free, via: "ETH 2021 page (6 exercises)"}
+    solutions: {status: free, via: "ETH 2021 page"}
+    code: {status: free, via: "exercise templates"}
+  uses_books: [siegwart-amr]
+  uses_software: [coppeliasim, matlab]
+  note: >-
+    The classic mobile-robotics course: locomotion, kinematics, perception, line extraction, Markov and Kalman
+    localization, EKF SLAM, planning. The exercises use CoppeliaSim with MATLAB. Slides are dense but complete.
+
+- id: stanford-pora1
+  short: "Stanford PoRA I"
+  group: course
+  name: Principles of Robot Autonomy I (AA 174A / AA 274A)
+  institution: Stanford University (Autonomous Systems Lab)
+  people: M. Pavone, M. Schwager
+  level: intro
+  year: 2025
+  topics: [kinematics, control, planning, sensors, perception, estimation, localization, slam, learning, ros]
+  offerings:
+    - {name: "AA 174A, autumn 2025", url: "https://stanfordasl.github.io/PoRA-I/aa174a_aut2526/", year: 2025, cost: free}
+    - {name: "AA 274A, autumn 2025", url: "https://stanfordasl.github.io/PoRA-I/aa274a_aut2526", year: 2025, cost: free}
+    - {name: "AA 174A, autumn 2024 (slides, notes, notebooks)", url: "https://stanfordasl.github.io/PoRA-I/aa174a_aut2425", year: 2024, cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: free, via: "course sites (all lectures)"}
+    notes: {status: free, via: "2024 site (course notes PDF)"}
+    video: {status: partial, via: "a few recordings; the rest on Canvas"}
+    exercises: {status: partial, via: "homework pages of past years"}
+    solutions: {status: partial, via: "practice exam solutions only"}
+    code: {status: partial, via: "Jupyter notebooks, ROS 2 setup guide"}
+  uses_software: [ros2, python]
+  note: >-
+    Very clear slides with consistent notation (Thrun et al.): state estimation, Bayes, Kalman and particle filters,
+    EKF localization, SLAM, planning, trajectory optimization and tracking, perception. Labs on TurtleBot with ROS 2.
+
+- id: stanford-pora2
+  short: "Stanford PoRA II"
+  group: learning
+  name: Principles of Robot Autonomy II (CS 237B)
+  institution: Stanford University
+  people: J. Bohg, M. Pavone, D. Sadigh
+  level: advanced
+  year: 2025
+  topics: [learning, manipulation, perception, control]
+  offerings:
+    - {name: "Course site, winter 2025", url: "https://web.stanford.edu/class/cs237b/", year: 2025, cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: free, via: "course site (16 lectures)"}
+    notes: {status: free, via: "course site"}
+    video: {status: none, via: "Canvas only"}
+    exercises: {status: partial, via: "homework page"}
+    solutions: {status: none}
+    code: {status: partial, via: "Colab notebooks"}
+  uses_software: [python, ros2]
+  related: [stanford-pora1]
+  note: Reinforcement learning, imitation learning, learning-based perception and manipulation, human-robot interaction.
+
+- id: stanford-cs223a
+  short: "Stanford CS 223A"
+  group: course
+  name: Introduction to Robotics (CS 223A)
+  institution: Stanford University
+  people: O. Khatib
+  level: intro
+  year: 2008
+  topics: [kinematics, dynamics, control, planning]
+  offerings:
+    - {name: "Stanford Engineering Everywhere (2008 recording)", url: "https://see.stanford.edu/Course/CS223A", year: 2008, cost: free}
+    - {name: "Current course page (winter 2026, materials on Canvas)", url: "https://cs.stanford.edu/groups/manips/teaching/cs223a", year: 2026, cost: free}
+  materials:
+    book: {status: paid, via: "course reader; Siciliano et al. as supplement"}
+    slides: {status: none}
+    notes: {status: free, via: "SEE handouts and lecture transcripts"}
+    video: {status: free, via: "SEE (16 lectures)"}
+    exercises: {status: free, via: "SEE (6 problem sets)"}
+    solutions: {status: none}
+    code: {status: none}
+  uses_books: [siciliano-rmpc]
+  note: Manipulator kinematics, Jacobians, dynamics and control. Older recordings, but a complete classic course.
+
+- id: gatech-cs3630
+  short: "GA Tech CS 3630"
+  group: course
+  name: Introduction to Robotics and Perception (CS 3630)
+  institution: Georgia Tech
+  people: F. Dellaert, S. Hutchinson
+  level: intro
+  year: 2025
+  topics: [kinematics, perception, estimation, localization, slam, planning, learning, aerial, driving]
+  offerings:
+    - {name: "Fall 2025 site (schedule with slides)", url: "https://dellaert.github.io/25F-3630/schedule.html", year: 2025, cost: free}
+    - {name: "Fall 2022 site", url: "https://dellaert.github.io/22F-3630/schedule.html", year: 2022, cost: free}
+  materials:
+    book: {status: free, via: "roboticsbook.org (online, interactive)"}
+    slides: {status: free, via: "fall 2025 schedule"}
+    notes: {status: free, via: "the book"}
+    video: {status: none, via: "Canvas only"}
+    exercises: {status: partial, via: "project descriptions on the course site"}
+    solutions: {status: none}
+    code: {status: free, via: "book notebooks (BSD-3)"}
+  uses_books: [dellaert-irp]
+  uses_software: [python, gtsam]
+  note: >-
+    Built around six running examples (sorter, vacuum, warehouse, differential drive, car, drone). Each covers state,
+    actions, sensing, perception, planning and learning, in Python notebooks.
+
+- id: cu-csci3302
+  short: "CU CSCI 3302"
+  group: course
+  name: Introduction to Robotics (CSCI 3302)
+  institution: University of Colorado Boulder
+  people: N. Correll, B. Hayes, A. Roncone
+  level: intro
+  year: 2022
+  topics: [kinematics, sensors, localization, slam, planning, architectures, learning]
+  offerings:
+    - {name: "Course page", url: "https://introduction-to-autonomous-robots.github.io/csci3302.html", year: 2022, cost: free}
+    - {name: "Coursera specialization 'Introduction to Robotics with Webots' (3 courses)", url: "https://www.coursera.org/specializations/introduction-robotics-webots", year: 2023, cost: paid}
+    - {name: "YouTube lecture playlist", url: "https://www.youtube.com/playlist?list=PLJafQ8U0gQVXVSg9_AjS1ZhT2E0FbPy2F", cost: free}
+  materials:
+    book: {status: free, via: "Correll et al. (source on GitHub)"}
+    slides: {status: unknown}
+    notes: {status: free, via: "the book"}
+    video: {status: free, via: "YouTube playlist; Coursera"}
+    exercises: {status: paid, via: "Coursera (peer-graded Webots projects)"}
+    solutions: {status: none}
+    code: {status: partial, via: "Webots worlds in the Coursera course"}
+  uses_books: [correll-iar]
+  uses_software: [webots, python]
+  note: >-
+    Low-level introduction built on Webots: odometry, forward and inverse kinematics, mapping, planning, behaviour
+    trees and a mobile-manipulation project.
+
+- id: hanze-robotics
+  short: "Hanze Intro to Robotics"
+  group: course
+  name: Introduction to Robotics (Hanze)
+  institution: Hanze University of Applied Sciences
+  people: F. N. Martins
+  level: intro
+  year: 2024
+  topics: [architectures, kinematics, sensors, perception, localization, control, planning]
+  offerings:
+    - {name: "Lecture slides (Google Drive)", url: "https://drive.google.com/drive/folders/1JfLwLR_FMLuedeSI55oBdiNAt0H76jtr?usp=sharing", cost: free}
+    - {name: "Robotics Simulation Labs", url: "https://felipenmartins.github.io/Robotics-Simulation-Labs/", cost: free}
+  materials:
+    book: {status: free, via: "Elements of Robotics (open access)"}
+    slides: {status: free, via: "Google Drive folder"}
+    notes: {status: none}
+    video: {status: none}
+    exercises: {status: free, via: "9 Webots labs (MIT license)"}
+    solutions: {status: none}
+    code: {status: free, via: "lab templates on GitHub"}
+  uses_books: [benari-elements]
+  uses_software: [webots, python]
+  derived_from: [cu-csci3302]
+  note: >-
+    Clear, well-designed slides and step-by-step Webots labs: state machines, line following, odometry, PID
+    go-to-goal, trajectory tracking, Dijkstra.
+
+- id: princeton-mae345
+  short: "Princeton MAE 345"
+  group: course
+  name: Introduction to Robotics (MAE 345 / ECE 345 / COS 346)
+  institution: Princeton University
+  people: A. Majumdar
+  level: intro
+  year: 2026
+  topics: [kinematics, control, perception, estimation, planning, learning, aerial]
+  offerings:
+    - {name: "Course site (slides, notes, assignments)", url: "https://irom-lab.princeton.edu/intro-to-robotics/", year: 2026, cost: free}
+    - {name: "YouTube lecture videos (2026, posted weekly)", url: "https://www.youtube.com/@intro-to-robotics", year: 2026, cost: free}
+    - {name: "Assignments on GitHub", url: "https://github.com/Princeton-Introduction-to-Robotics", cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: free, via: "course site"}
+    notes: {status: free, via: "course site"}
+    video: {status: partial, via: "YouTube (being posted during the fall 2026 term)"}
+    exercises: {status: free, via: "course site and GitHub"}
+    solutions: {status: none}
+    code: {status: free, via: "GitHub"}
+  uses_software: [crazyflie, python]
+  note: Hands-on course with Crazyflie mini drones; covers feedback control, vision, motion planning and learning.
+
+- id: mit-manipulation
+  short: "MIT Manipulation"
+  group: course
+  name: Robotic Manipulation (6.4210 / 6.4212)
+  institution: MIT
+  people: R. Tedrake, T. Lozano-Pérez
+  level: advanced
+  year: 2025
+  topics: [manipulation, kinematics, perception, planning, control, learning]
+  offerings:
+    - {name: "Course site, fall 2025", url: "https://manipulation.csail.mit.edu/Fall2025/", year: 2025, cost: free}
+    - {name: "MIT OpenCourseWare, fall 2022 (lecture videos)", url: "https://ocw.mit.edu/courses/6-4210-robotic-manipulation-fall-2022", year: 2022, cost: free}
+  materials:
+    book: {status: free, via: "online textbook (manipulation.mit.edu)"}
+    slides: {status: unknown}
+    notes: {status: free, via: "online textbook"}
+    video: {status: free, via: "MIT OCW (2022)"}
+    exercises: {status: free, via: "problem sets on the course site"}
+    solutions: {status: none}
+    code: {status: free, via: "Drake notebooks in the textbook"}
+  uses_books: [tedrake-manipulation]
+  uses_software: [drake, python]
+  note: Perception, planning and control for robot arms, with runnable Drake examples in every chapter.
+
+- id: mit-underactuated
+  short: "MIT Underactuated"
+  group: course
+  name: Underactuated Robotics (6.832)
+  institution: MIT
+  people: R. Tedrake
+  level: advanced
+  year: 2024
+  topics: [dynamics, control, planning, learning]
+  offerings:
+    - {name: "Online notes and course", url: "https://underactuated.mit.edu/", year: 2024, cost: free}
+  materials:
+    book: {status: free, via: "online notes (HTML and PDF)"}
+    slides: {status: none}
+    notes: {status: free, via: "online notes"}
+    video: {status: free, via: "YouTube"}
+    exercises: {status: free, via: "end-of-chapter exercises"}
+    solutions: {status: none}
+    code: {status: free, via: "Drake / Colab notebooks"}
+  uses_books: [tedrake-underactuated]
+  uses_software: [drake, python]
+  note: Nonlinear dynamics and control of walking, flying and swimming robots; optimisation-based control.
+
+- id: cmu-16362
+  short: "CMU 16-362"
+  group: course
+  name: Mobile Robot Algorithms Laboratory (16-362)
+  institution: Carnegie Mellon University
+  people: W. Tabib
+  level: intro
+  year: 2026
+  topics: [dynamics, control, estimation, slam, planning, aerial]
+  offerings:
+    - {name: "Course site, fall 2026", url: "https://mral-cmu.github.io", year: 2026, cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: free, via: "posted with each lecture"}
+    notes: {status: none}
+    video: {status: none}
+    exercises: {status: partial, via: "assignments distributed through GitHub"}
+    solutions: {status: none}
+    code: {status: partial}
+  uses_software: [python]
+  note: Quadrotor autonomy from scratch in Python. Dynamics simulation, control, mapping, estimation, planning, exploration.
+
+- id: cmu-16311
+  short: "CMU 16-311"
+  group: course
+  name: Introduction to Robotics (16-311)
+  institution: Carnegie Mellon University
+  people: H. Choset
+  level: intro
+  year: 2025
+  topics: [kinematics, control, sensors, localization, planning]
+  offerings:
+    - {name: "Course site, spring 2025", url: "https://www.cs.cmu.edu/~16311/s25/schedule/scheduleindex.html", year: 2025, cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: partial, via: "lecture notes linked as they are released"}
+    notes: {status: partial}
+    video: {status: none}
+    exercises: {status: free, via: "homework PDFs"}
+    solutions: {status: none}
+    code: {status: none}
+  note: Undergraduate introduction with hardware labs; homework handouts are public.
+
+- id: columbia-coms4733
+  group: course
+  name: Computational Aspects of Robotics (COMS 4733)
+  institution: Columbia University
+  people: Y. Li
+  level: intro
+  year: 2025
+  topics: [kinematics, dynamics, planning, control, perception, slam, learning]
+  offerings:
+    - {name: "Course site, fall 2025", url: "https://robopil.github.io/coms4733", year: 2025, cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: none}
+    exercises: {status: none}
+    solutions: {status: none}
+    code: {status: none}
+  note: Syllabus only. Useful as a modern topic list that ends with imitation learning and vision-language-action models.
+
+- id: duckietown-mooc
+  short: "Duckietown MOOC"
+  group: course
+  name: Self-Driving Cars with Duckietown
+  institution: ETH Zurich, Université de Montréal, TTIC (Duckietown)
+  people: A. Censi, L. Paull, J. Tani, M. Walter et al.
+  level: intro
+  year: 2025
+  topics: [perception, kinematics, localization, control, planning, learning, driving, ros]
+  offerings:
+    - {name: "edX MOOC (2025 edition, with virtual Duckiebots)", url: "https://duckietown.com/mooc/", year: 2025, cost: free}
+    - {name: "Instructor manual and curricula", url: "https://docs.duckietown.com/ente/instructor-manual/curricula/mooc/index.html", cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: unknown}
+    notes: {status: free, via: "Duckietown documentation"}
+    video: {status: free, via: "edX MOOC; YouTube preview"}
+    exercises: {status: free, via: "exercises in simulation, on virtual or real Duckiebots"}
+    solutions: {status: none}
+    code: {status: free, via: "open-source Duckietown stack"}
+  uses_software: [ros, python]
+  note: Hands-on autonomous driving with small robots; hardware optional since 2025 (virtual Duckiebots).
+
+- id: rptu-autsys
+  group: course
+  name: Autonomous Systems (lecture outline)
+  institution: RPTU Kaiserslautern-Landau
+  level: intro
+  topics: [architectures, sensors, localization, planning, control]
+  offerings:
+    - {name: "Lecture page", url: "https://mv.rptu.de/fgs/mec/teaching/lectures/autonomous-systems", cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: none}
+    exercises: {status: none}
+    solutions: {status: none}
+    code: {status: none}
+  note: Content outline only; materials are not public.
+
+# ============================================================== MOOCs
+- id: modern-robotics
+  short: "Modern Robotics (MOOC)"
+  group: mooc
+  name: Modern Robotics
+  institution: Northwestern University
+  people: K. M. Lynch, F. C. Park
+  level: intro
+  year: 2017
+  topics: [kinematics, dynamics, planning, control, manipulation]
+  offerings:
+    - {name: "Book, videos and software (Northwestern wiki)", url: "https://hades.mech.northwestern.edu/index.php/Modern_Robotics", year: 2017, cost: free}
+    - {name: "Coursera specialization (6 courses)", url: "https://www.coursera.org/specializations/modernrobotics", year: 2018, cost: free-audit}
+  materials:
+    book: {status: free, via: "preprint PDF (several formats)"}
+    slides: {status: none}
+    notes: {status: free, via: "the book"}
+    video: {status: free, via: "book site and YouTube"}
+    exercises: {status: free, via: "book exercises; Coursera assignments"}
+    solutions: {status: partial, via: "Coursera graded assignments"}
+    code: {status: free, via: "Python, MATLAB and Mathematica library"}
+  uses_books: [lynch-park-mr]
+  uses_software: [coppeliasim, python, matlab]
+  note: Screw theory and product of exponentials; a full course in short videos with a free book.
+
+- id: toronto-sdc
+  short: "Toronto Self-Driving Cars"
+  group: mooc
+  name: Self-Driving Cars Specialization
+  institution: University of Toronto (Coursera)
+  people: S. Waslander, J. Kelly
+  level: advanced
+  year: 2019
+  topics: [estimation, localization, perception, planning, control, driving]
+  offerings:
+    - {name: "Coursera specialization (4 courses)", url: "https://www.coursera.org/specializations/self-driving-cars", cost: paid}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: paid, via: "Coursera"}
+    exercises: {status: paid, via: "Coursera projects in CARLA"}
+    solutions: {status: none}
+    code: {status: paid}
+  uses_software: [carla, python]
+  note: State estimation (EKF, ES-EKF), visual perception and motion planning for cars; projects in CARLA.
+
+- id: penn-robotics
+  short: "Penn Robotics"
+  group: mooc
+  name: Robotics Specialization
+  institution: University of Pennsylvania (Coursera)
+  people: V. Kumar, D. Lee, K. Daniilidis, C. J. Taylor, J. Shi, D. Koditschek
+  level: intro
+  year: 2016
+  topics: [aerial, planning, kinematics, perception, estimation, learning]
+  offerings:
+    - {name: "Coursera: Aerial Robotics (first of 6 courses)", url: "https://www.coursera.org/learn/robotics-flight", cost: free-audit}
+    - {name: "Class Central overview of the specialization", url: "https://classcentral.com/course/robotics-18626", cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: free, via: "Coursera (audit)"}
+    exercises: {status: paid, via: "Coursera graded assignments"}
+    solutions: {status: none}
+    code: {status: paid}
+  uses_software: [matlab]
+  note: Aerial robotics, computational motion planning, mobility, perception, estimation and learning; MATLAB assignments.
+
+- id: nvidia-dli-auto
+  group: mooc
+  name: A Beginner's Guide to Autonomous Robots
+  institution: NVIDIA Deep Learning Institute
+  level: intro
+  topics: [architectures, sensors, perception, localization, planning, learning]
+  offerings:
+    - {name: "NVIDIA DLI (about 1 hour)", url: "https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-35+V1", cost: free}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: free}
+    exercises: {status: none}
+    solutions: {status: none}
+    code: {status: none}
+  note: One-hour overview of an autonomous-robot software stack; good as a first motivating lecture.
+
+- id: umich-ai-av
+  group: mooc
+  name: AI for Autonomous Vehicles and Robotics
+  institution: University of Michigan (Coursera)
+  level: intro
+  topics: [learning, perception, driving]
+  offerings:
+    - {name: "Coursera course (about 1 week)", url: "https://www.coursera.org/learn/ai-for-autonomous-vehicles-and-robotics", cost: free-audit}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: free, via: "Coursera (audit)"}
+    exercises: {status: paid}
+    solutions: {status: none}
+    code: {status: none}
+  note: Short overview of machine learning for perception and decision making; not at university-course depth.
+
+- id: packt-ai-robotics
+  short: "Packt AI for Robotics"
+  group: mooc
+  name: Artificial Intelligence for Robotics
+  institution: Packt (Coursera)
+  level: intermediate
+  topics: [learning, perception, planning, ros]
+  offerings:
+    - {name: "Coursera course (about 2 weeks)", url: "https://www.coursera.org/learn/packt-artificial-intelligence-for-robotics", cost: paid}
+  materials:
+    book: {status: none}
+    slides: {status: none}
+    notes: {status: none}
+    video: {status: paid}
+    exercises: {status: paid}
+    solutions: {status: none}
+    code: {status: paid}
+  uses_software: [ros2, python]
+  note: Applied project course (object recognition, RL, navigation) with ROS 2 and OpenCV.
+
+# ============================================================== textbooks
+- id: siegwart-amr
+  short: "Siegwart et al."
+  group: book
+  name: Introduction to Autonomous Mobile Robots (2nd ed.)
+  people: R. Siegwart, I. R. Nourbakhsh, D. Scaramuzza
+  institution: MIT Press
+  level: intro
+  year: 2011
+  topics: [kinematics, sensors, perception, localization, slam, planning]
+  offerings:
+    - {name: "MIT Press (2nd ed., 2011)", url: "https://bookshop.org/p/books/introduction-to-autonomous-mobile-robots-second-edition-davide-scaramuzza/a2f4851c1824469c", cost: paid}
+  materials:
+    book: {status: paid}
+  note: The textbook of ETH AMR.
+
+- id: correll-iar
+  short: "Correll et al."
+  group: book
+  name: Introduction to Autonomous Robots
+  people: N. Correll, B. Hayes, C. Heckman, A. Roncone
+  institution: MIT Press / open source
+  level: intro
+  year: 2022
+  topics: [kinematics, sensors, perception, localization, slam, planning, learning]
+  offerings:
+    - {name: "Book site", url: "https://introduction-to-autonomous-robots.github.io", year: 2022, cost: free}
+    - {name: "Source and releases on GitHub", url: "https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots/releases", cost: free}
+    - {name: "Open Textbook Library", url: "https://open.umn.edu/opentextbooks/textbooks/316", cost: free}
+  materials:
+    book: {status: free, via: "LaTeX source (CC BY-NC-ND); older compiled editions on GitHub; print by MIT Press"}
+  license: CC BY-NC-ND
+  note: Mechanisms, sensors, actuators and algorithms; the textbook of CU CSCI 3302.
+
+- id: corke-rvc3
+  short: "Robotics, Vision and Control"
+  group: book
+  name: "Robotics, Vision and Control: Fundamental Algorithms in Python (3rd ed.)"
+  people: P. Corke
+  institution: Springer
+  level: intro
+  year: 2023
+  topics: [kinematics, dynamics, control, perception, localization, slam, planning]
+  offerings:
+    - {name: "Book site", url: "https://petercorke.com/rvc3p/home/", cost: free}
+    - {name: "Springer", url: "https://link.springer.com/book/10.1007/978-3-031-06469-2", year: 2023, cost: paid}
+    - {name: "Code and notebooks for every chapter", url: "https://github.com/petercorke/RVC3-python", cost: free}
+  materials:
+    book: {status: paid}
+    code: {status: free, via: "RVC3-python (Jupyter notebooks for all chapters)"}
+  uses_software: [python-robotics-ecosystem]
+  note: Broad and very practical; every figure can be reproduced with the Python toolboxes. A MATLAB edition also exists.
+
+- id: dellaert-irp
+  short: "Dellaert & Hutchinson"
+  group: book
+  name: Introduction to Robotics and Perception
+  people: F. Dellaert, S. Hutchinson
+  institution: Georgia Tech (online, draft)
+  level: intro
+  year: 2024
+  topics: [kinematics, perception, estimation, localization, slam, planning, learning]
+  offerings:
+    - {name: "Online interactive book", url: "https://www.roboticsbook.org/intro.html", cost: free}
+    - {name: "Notebooks on GitHub", url: "https://github.com/gtbook/robotics", cost: free}
+  materials:
+    book: {status: free, via: "online (read only; code BSD-3)"}
+    code: {status: free}
+  uses_software: [gtsam, python]
+  note: Every section is a runnable notebook; probabilistic and factor-graph view of robotics.
+
+- id: benari-elements
+  short: "Elements of Robotics"
+  group: book
+  name: Elements of Robotics
+  people: M. Ben-Ari, F. Mondada
+  institution: Springer (open access)
+  level: intro
+  year: 2018
+  topics: [architectures, sensors, kinematics, control, localization, slam, planning, learning]
+  offerings:
+    - {name: "Springer (open access, CC BY)", url: "https://link.springer.com/book/10.1007/978-3-319-62533-1", year: 2018, cost: free}
+  materials:
+    book: {status: free}
+  license: CC BY
+  note: Gentle, algorithm-first introduction with educational Thymio robot examples; used by the Hanze course.
+
+- id: lynch-park-mr
+  short: "Modern Robotics (book)"
+  group: book
+  name: "Modern Robotics: Mechanics, Planning, and Control"
+  people: K. M. Lynch, F. C. Park
+  institution: Cambridge University Press
+  level: intro
+  year: 2017
+  topics: [kinematics, dynamics, planning, control, manipulation]
+  offerings:
+    - {name: "Free preprint and videos", url: "https://hades.mech.northwestern.edu/index.php/Modern_Robotics", cost: free}
+  materials:
+    book: {status: free, via: "preprint PDF"}
+    video: {status: free}
+    code: {status: free}
+  note: The book of the Modern Robotics MOOC.
+
+- id: thrun-pr
+  short: "Probabilistic Robotics"
+  group: book
+  name: Probabilistic Robotics
+  people: S. Thrun, W. Burgard, D. Fox
+  institution: MIT Press
+  level: advanced
+  year: 2005
+  topics: [estimation, localization, slam, planning]
+  offerings:
+    - {name: "Book page", url: "https://robots.stanford.edu/probabilistic-robotics/", cost: paid}
+  materials:
+    book: {status: paid}
+  note: The reference for Bayes, Kalman and particle filters, Markov localization and SLAM; its notation is used by Stanford PoRA.
+
+- id: barfoot-ser
+  group: book
+  name: State Estimation for Robotics (2nd ed.)
+  people: T. D. Barfoot
+  institution: Cambridge University Press
+  level: advanced
+  year: 2024
+  topics: [estimation, localization, slam]
+  offerings:
+    - {name: "Author's page (unofficial PDF)", url: "https://asrl.utias.utoronto.ca/~tdb/", cost: free}
+  materials:
+    book: {status: free, via: "author's unofficial PDF"}
+  note: Rigorous treatment of Gaussian estimation, matrix Lie groups and batch/continuous-time estimation.
+
+- id: lavalle-pa
+  group: book
+  name: Planning Algorithms
+  people: S. M. LaValle
+  institution: Cambridge University Press
+  level: advanced
+  year: 2006
+  topics: [planning]
+  offerings:
+    - {name: "Full book online", url: "https://lavalle.pl/planning/", cost: free}
+  materials:
+    book: {status: free, via: "HTML and PDF chapters"}
+  note: The standard reference on discrete, sampling-based and combinatorial motion planning.
+
+- id: hauser-rs
+  group: book
+  name: Robotic Systems (draft)
+  people: K. Hauser
+  institution: University of Illinois
+  level: intro
+  year: 2024
+  topics: [kinematics, dynamics, control, planning, perception, learning]
+  offerings:
+    - {name: "Online book with notebooks", url: "https://motion.cs.illinois.edu/RoboticSystems/", cost: free}
+  materials:
+    book: {status: free, via: "HTML and Jupyter (some chapters incomplete)"}
+    code: {status: free, via: "Klampt (Python)"}
+  note: Systems-level view of robotics with runnable notebooks.
+
+- id: tedrake-manipulation
+  short: "Robotic Manipulation (book)"
+  group: book
+  name: "Robotic Manipulation: Perception, Planning, and Control"
+  people: R. Tedrake
+  institution: MIT (online)
+  level: advanced
+  topics: [manipulation, perception, planning, control, learning]
+  offerings:
+    - {name: "Online textbook", url: "https://manipulation.mit.edu", cost: free}
+  materials:
+    book: {status: free}
+    code: {status: free, via: "Drake notebooks"}
+  uses_software: [drake]
+
+- id: tedrake-underactuated
+  short: "Underactuated Robotics (book)"
+  group: book
+  name: "Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation"
+  people: R. Tedrake
+  institution: MIT (online)
+  level: advanced
+  year: 2024
+  topics: [dynamics, control, planning, learning]
+  offerings:
+    - {name: "Online notes", url: "https://underactuated.mit.edu/", cost: free}
+  materials:
+    book: {status: free}
+    code: {status: free, via: "Drake notebooks"}
+  uses_software: [drake]
+
+- id: siciliano-rmpc
+  short: "Siciliano et al."
+  group: book
+  name: "Robotics: Modelling, Planning and Control"
+  people: B. Siciliano, L. Sciavicco, L. Villani, G. Oriolo
+  institution: Springer
+  level: intermediate
+  year: 2009
+  topics: [kinematics, dynamics, control, planning]
+  offerings:
+    - {name: "Springer", url: "https://link.springer.com/book/10.1007/978-1-84628-642-1", cost: paid}
+  materials:
+    book: {status: paid}
+  note: Supplementary text of Stanford CS 223A.
+
+- id: cornell-foundations
+  group: book
+  name: Foundations of Robotics (course notes)
+  people: R. A. Knepper, C. Mavrogiannis, J. Proft, W. Thomason
+  institution: Cornell University
+  level: intro
+  topics: [kinematics, dynamics, control, estimation]
+  offerings:
+    - {name: "Course notes (PDF chapters)", url: "https://rpal.cs.cornell.edu/foundations", cost: free}
+  materials:
+    book: {status: free, via: "PDF chapters (copyrighted, readable online)"}
+  note: "Notes of Cornell CS 4750: mechanisms, simulation, kinematics, uncertainty, optimization and control."
+
+# ============================================================== video series
+- id: corke-robot-academy
+  short: "Robot Academy"
+  group: video
+  name: Robot Academy
+  institution: Queensland University of Technology
+  people: P. Corke
+  level: intro
+  year: 2017
+  topics: [kinematics, dynamics, control, perception]
+  offerings:
+    - {name: "Robot Academy", url: "https://petercorke.com/resources/robot-academy/", cost: free}
+  materials:
+    video: {status: free, via: "over 200 short lessons and masterclasses"}
+  uses_books: [corke-rvc3]
+  note: Short, well-produced video lessons that follow the Robotics, Vision and Control book.
+
+- id: bonn-stachniss
+  short: "Stachniss lectures (Bonn)"
+  group: video
+  name: Lectures of Cyrill Stachniss (Robot Mapping, Mobile Sensing and Robotics, Self-Driving Cars)
+  institution: University of Bonn
+  people: C. Stachniss
+  level: advanced
+  year: 2021
+  topics: [estimation, localization, slam, perception, driving]
+  offerings:
+    - {name: "Teaching page with links", url: "https://www.ipb.uni-bonn.de/teaching", cost: free}
+    - {name: "Robot Mapping (slides and videos)", url: "https://www.ipb.uni-bonn.de/robot-mapping/", year: 2013, cost: free}
+    - {name: "Robot Mapping YouTube playlist", url: "https://www.youtube.com/playlist?list=PLgnQpQtFTOGQrZ4O5QzbIHgl3b1JHimN_", year: 2013, cost: free}
+    - {name: "Mobile Sensing and Robotics II (2021)", url: "https://www.ipb.uni-bonn.de/msr2-2021/index.html", year: 2021, cost: free}
+    - {name: "Techniques for Self-Driving Cars", url: "https://www.ipb.uni-bonn.de/sdc-2021/index.html", year: 2021, cost: free}
+  materials:
+    slides: {status: partial, via: "Robot Mapping course page"}
+    video: {status: free, via: "YouTube playlists"}
+    exercises: {status: partial, via: "2020 exercise archive"}
+  uses_books: [thrun-pr]
+  note: Probably the clearest video explanations of Kalman and particle filters, EKF and graph SLAM.
+
+# ============================================================== labs and notebooks
+- id: martins-labs
+  short: "Martins labs"
+  group: labs
+  name: Robotics Simulation Labs and Mobile Robot Control notebooks
+  institution: Hanze University of Applied Sciences
+  people: F. N. Martins
+  level: intro
+  topics: [architectures, perception, localization, control, planning]
+  offerings:
+    - {name: "Robotics Simulation Labs", url: "https://github.com/felipenmartins/Robotics-Simulation-Labs", cost: free}
+    - {name: "Mobile Robot Control notebooks", url: "https://github.com/felipenmartins/Mobile-Robot-Control", cost: free}
+  materials:
+    exercises: {status: free}
+    code: {status: free}
+  license: MIT
+  uses_software: [webots, python]
+  derived_from: [cu-csci3302]
+  related: [hanze-robotics]
+  note: Nine Webots labs from installation to Dijkstra, plus Jupyter notebooks on mobile-robot control.
+
+- id: malaga-notebooks
+  short: "Málaga notebooks"
+  group: labs
+  name: Jupyter notebooks for robotics courses
+  institution: University of Málaga (MAPIR)
+  people: S. F. Baltanás, J. R. Ruiz-Sarmiento, J. González-Jiménez
+  level: intro
+  topics: [kinematics, sensors, localization, slam, planning]
+  offerings:
+    - {name: "GitHub", url: "https://github.com/jotaraul/jupyter-notebooks-for-robotics-courses", cost: free}
+  materials:
+    exercises: {status: free}
+    code: {status: free}
+  license: GPL-3.0
+  uses_software: [python]
+  note: Notebook exercises on motion, sensing, localization (EKF, particle filter), mapping, SLAM and planning.
+
+- id: duckiedrone
+  group: labs
+  name: Introduction to Robotics with Drones (Duckiedrone)
+  institution: Duckietown
+  level: intro
+  topics: [sensors, control, estimation, localization, slam, aerial]
+  offerings:
+    - {name: "Online textbook and projects", url: "https://docs.duckietown.com/ente/course-intro-to-drones/intro.html", cost: free}
+  materials:
+    notes: {status: free}
+    exercises: {status: free, via: "projects: PID altitude control, UKF, localization, SLAM"}
+  note: Build-your-own drone course; hardware kit required for the full experience.
+
+# ============================================================== robot learning, physical AI
+- id: hf-robotics-course
+  short: "Hugging Face course"
+  group: learning
+  name: Hugging Face Robotics Course
+  institution: Hugging Face
+  level: intro
+  year: 2025
+  topics: [learning, kinematics]
+  offerings:
+    - {name: "Course", url: "https://huggingface.co/learn/robotics-course", cost: free}
+  materials:
+    notes: {status: partial, via: "units 0–2 published; RL, imitation and foundation-model units announced"}
+    code: {status: free, via: "LeRobot"}
+  uses_software: [lerobot]
+
+- id: robot-learning-tutorial
+  short: "Robot Learning tutorial"
+  group: learning
+  name: "Robot Learning: A Tutorial"
+  institution: Hugging Face
+  people: F. Capuano, C. Pascal, A. Zouitine, T. Wolf, M. Aractingi
+  level: intermediate
+  year: 2025
+  topics: [learning]
+  offerings:
+    - {name: "Interactive tutorial (Hugging Face Space)", url: "https://huggingface.co/spaces/lerobot/robot-learning-tutorial", cost: free}
+    - {name: "arXiv 2510.12403", url: "https://arxiv.org/abs/2510.12403", year: 2025, cost: free}
+  materials:
+    notes: {status: free}
+    code: {status: free, via: "LeRobot examples"}
+  uses_software: [lerobot]
+  note: From RL and behavioural cloning to generalist vision-language-action models, with runnable LeRobot code.
+
+- id: cornell-cs4756
+  short: "Cornell CS 4756"
+  group: learning
+  name: Robot Learning (CS 4756 / 5756)
+  institution: Cornell University
+  people: K. Fang
+  level: advanced
+  year: 2026
+  topics: [learning, control, perception]
+  offerings:
+    - {name: "Course site, spring 2026", url: "https://www.cs.cornell.edu/courses/cs4756/2026sp/", year: 2026, cost: free}
+  materials:
+    slides: {status: free, via: "slides for every lecture"}
+    exercises: {status: free, via: "six assignments on GitHub"}
+    code: {status: free}
+  uses_software: [python]
+  note: Imitation learning, deep RL, model-based control, visuomotor policies and foundation models.
+
+- id: osu-cs539
+  group: learning
+  name: Embodied AI (CS 539)
+  institution: Oregon State University
+  people: S. Lee
+  level: advanced
+  year: 2019
+  topics: [learning, perception]
+  offerings:
+    - {name: "Course page, fall 2019", url: "https://web.engr.oregonstate.edu/~leestef/courses/2019/fall/cs539.html", year: 2019, cost: free}
+  materials:
+    slides: {status: free, via: "lecture slides (pptx)"}
+  note: Paper-reading seminar on visual navigation, instruction following, embodied question answering and sim2real.
+
+- id: physical-ai-reading
+  group: learning
+  name: "What is physical AI? Introductory articles"
+  level: intro
+  year: 2025
+  topics: [learning]
+  offerings:
+    - {name: "Towards Data Science: Physical AI, what it is and what it is not", url: "https://towardsdatascience.com/physical-ai-what-it-is-and-what-it-is-not/", cost: free}
+    - {name: "A beginner's guide to physical AI", url: "https://tacticzhazel.substack.com/p/a-beginners-guide-to-physical-ai", cost: free}
+    - {name: "HumynLabs: What is physical AI (robotics, embodied AI)", url: "https://humynlabs.ai/blog/what-is-physical-ai-robotics-embodied-ai-explained", cost: free}
+    - {name: "Universal Robots webinar: physical AI", url: "https://video.universal-robots.com/discover-how-physical-ai-is-1", cost: free}
+  materials:
+    notes: {status: free}
+  note: Popular-science introductions with good graphics; useful for a motivating first lecture.
+
+# ============================================================== software
+- id: webots
+  group: software
+  name: Webots
+  institution: Cyberbotics
+  url: https://cyberbotics.com
+  license: Apache 2.0
+  topics: [kinematics, sensors, control]
+  note: Open-source desktop robot simulator with many ready robot models (e-puck, TurtleBot, Pioneer); Python, C, C++, MATLAB.
+
+- id: coppeliasim
+  short: "CoppeliaSim"
+  group: software
+  name: CoppeliaSim (formerly V-REP)
+  institution: Coppelia Robotics
+  url: https://www.coppeliarobotics.com
+  license: Free educational license
+  topics: [kinematics, manipulation]
+  note: Versatile simulator with remote APIs for Python and MATLAB.
+
+- id: mujoco
+  group: software
+  name: MuJoCo
+  institution: Google DeepMind
+  url: https://mujoco.org
+  license: Apache 2.0
+  topics: [dynamics, control, learning]
+  note: Fast physics engine for contact-rich simulation and robot learning; Python bindings.
+
+- id: gazebo
+  group: software
+  name: Gazebo
+  institution: Open Robotics
+  url: https://gazebosim.org
+  license: Apache 2.0
+  topics: [ros, sensors]
+  note: The standard simulator of the ROS ecosystem.
+
+- id: isaac-sim
+  short: "Isaac Sim"
+  group: software
+  name: NVIDIA Isaac Sim and Isaac Lab
+  institution: NVIDIA
+  url: https://developer.nvidia.com/isaac/sim
+  license: Apache 2.0 (plus NVIDIA additional materials license)
+  topics: [perception, learning, ros]
+  note: Photorealistic GPU simulator for perception and large-scale robot learning; needs an NVIDIA RTX GPU.
+
+- id: carla
+  group: software
+  name: CARLA
+  institution: CARLA team (CVC, Intel Labs)
+  url: https://carla.org
+  license: MIT
+  topics: [driving, perception]
+  note: Open-source simulator for autonomous driving.
+
+- id: ros2
+  group: software
+  name: ROS 2
+  institution: Open Robotics
+  url: https://docs.ros.org
+  license: Apache 2.0
+  topics: [ros]
+  note: The robot middleware used in industry and in many courses.
+
+- id: ros
+  short: "ROS 1"
+  group: software
+  name: ROS (1)
+  institution: Open Robotics
+  url: https://wiki.ros.org
+  license: BSD
+  topics: [ros]
+  note: The original Robot Operating System; end of life in 2025, replaced by ROS 2.
+
+- id: drake
+  group: software
+  name: Drake
+  institution: Toyota Research Institute / MIT
+  url: https://drake.mit.edu
+  license: BSD-3
+  topics: [dynamics, control, planning, manipulation]
+  note: Model-based design and optimisation toolbox used by the MIT manipulation and underactuated courses.
+
+- id: python-robotics-ecosystem
+  short: "Robotics Toolbox (Python)"
+  group: software
+  name: Python Robotics Ecosystem (Robotics Toolbox, Spatial Maths, Machine Vision Toolbox, Swift)
+  institution: QUT
+  people: P. Corke, J. Haviland
+  url: https://github.com/petercorke/robotics-toolbox-python
+  license: MIT
+  topics: [kinematics, dynamics, planning, localization, perception]
+  note: The Python toolboxes behind Robotics, Vision and Control, with the browser-based Swift simulator.
+
+- id: pythonrobotics
+  group: software
+  name: PythonRobotics
+  people: A. Sakai et al.
+  url: https://atsushisakai.github.io/PythonRobotics/
+  license: MIT
+  topics: [localization, slam, planning, control]
+  note: Short, readable Python implementations of classic algorithms (EKF, particle filter, A*, RRT, pure pursuit) with animations.
+
+- id: gtsam
+  group: software
+  name: GTSAM
+  institution: Georgia Tech
+  url: https://gtsam.org
+  license: BSD
+  topics: [estimation, slam]
+  note: Factor-graph library for estimation and SLAM, with Python bindings; used by the Dellaert & Hutchinson book.
+
+- id: ompl
+  group: software
+  name: OMPL (Open Motion Planning Library)
+  institution: Rice University (Kavraki Lab)
+  url: https://ompl.kavrakilab.org
+  license: BSD
+  topics: [planning]
+  note: Sampling-based planners (PRM, RRT and many variants) with Python bindings.
+
+- id: lerobot
+  group: software
+  name: LeRobot
+  institution: Hugging Face
+  url: https://github.com/huggingface/lerobot
+  license: Apache 2.0
+  topics: [learning]
+  note: PyTorch library, datasets and pretrained policies for real-world robot learning (low-cost SO-100/101 arms).
+
+- id: crazyflie
+  short: "Crazyflie"
+  group: software
+  name: Crazyflie (Bitcraze)
+  institution: Bitcraze
+  url: https://www.bitcraze.io
+  license: Open source (GPL-3.0 firmware)
+  topics: [aerial, control]
+  note: Open-source palm-sized quadrotor platform used by Princeton MAE 345.
+
+- id: drift
+  group: software
+  name: Drift
+  institution: Drift (startup)
+  url: https://docs.godrift.ai/getting-started/introduction
+  license: Proprietary (free tier)
+  topics: [ros]
+  note: AI copilot on the command line for setting up and debugging ROS / Gazebo simulations.
+
+- id: python
+  group: software
+  name: Python
+  url: https://www.python.org
+  license: PSF
+  hidden: true
+
+- id: matlab
+  group: software
+  name: MATLAB
+  institution: MathWorks
+  url: https://www.mathworks.com
+  license: Commercial (campus licenses common)
+  hidden: true
