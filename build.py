@@ -58,9 +58,9 @@ def readme(d, res, by):
          "",
          "**Interactive version** (filters, search, connections between resources): "
          "https://rangazit.github.io/robotics-teaching-resources/", "",
-         "Availability: ✅ free and complete · ◐ partial · 💲 paid · — not available · ? unknown. "
-         "Courses that are offered in several ways (for example a university course and its MOOC) are listed once, "
-         "with all their offerings.", "",
+         "*Free online* lists the materials that are freely available for each resource; open the details under each table "
+         "for the source of every item and for paid or partial materials. A course offered in several ways (for example a "
+         "university course and its MOOC) is listed once; the other ways are in the last column.", "",
          "## Contents", ""]
     for g in d["groups"]:
         L.append("- [%s](#%s)" % (g["name"], g["name"].lower().replace(" ", "-").replace(",", "")))
@@ -78,16 +78,22 @@ def readme(d, res, by):
                                                         r.get("license", ""), ub, r.get("note", "")))
             L.append("")
             continue
-        L += ["| Resource | Year | " + " | ".join(n for _, n in MATS) + " | Software | Topics |",
-              "|---|---|" + "|".join([":-:"] * len(MATS)) + "|---|---|"]
+        L += ["| Resource | Free online | Textbook | Software | Other ways to take it |", "|---|---|---|---|---|"]
         for r in items:
             m = r.get("materials", {})
-            cells = [ICON[m[k]["status"]] if k in m else "" for k, _ in MATS]
-            sw = ", ".join(by[x]["name"] for x in r.get("uses_software", []))
-            who = r.get("institution", "")
-            L.append("| %s<br><sub>%s</sub> | %s | %s | %s | %s |" % (
-                md_link(r), who, r.get("year", ""), " | ".join(cells), sw,
-                ", ".join(topics[t] for t in r.get("topics", []))))
+            free = [n.lower() for k, n in MATS if k in m and m[k]["status"] == "free"]
+            part = [n.lower() for k, n in MATS if k in m and m[k]["status"] == "partial"]
+            fb = [by[x] for x in r.get("uses_books", [])]
+            if "book" not in [k for k, _ in MATS if k in m and m[k]["status"] == "free"] and any(b.get("materials", {}).get("book", {}).get("status") == "free" for b in fb):
+                free.insert(0, "book")
+            av = ", ".join(free) if free else "—"
+            if part: av += "<br><sub>partly: " + ", ".join(part) + "</sub>"
+            books = "<br>".join("[%s](%s)" % (b.get("short", b["name"]), url_of(b)) for b in fb) or ("own book" if r["group"] == "book" else "")
+            sw = ", ".join(by[x].get("short", by[x]["name"]) for x in r.get("uses_software", []) if x != "python") or ("Python" if "python" in r.get("uses_software", []) else "")
+            offs = r.get("offerings", [])[1:]
+            other = "<br>".join("[%s](%s)" % (o["name"], o["url"]) for o in offs)
+            who = ", ".join(x for x in (r.get("institution"), str(r.get("year", "")) if r.get("year") else "") if x)
+            L.append("| **%s**<br><sub>%s</sub> | %s | %s | %s | %s |" % (md_link(r), who, av, books if r["group"] != "book" else "", sw, other))
         L.append("")
         L.append("<details><summary>Details: offerings, sources of each material, notes</summary>")
         L.append("")

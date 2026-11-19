@@ -4,7 +4,7 @@ A curated, checked list of courses, textbooks, videos, exercises and software fo
 
 **Interactive version** (filters, search, connections between resources): https://rangazit.github.io/robotics-teaching-resources/
 
-Availability: ✅ free and complete · ◐ partial · 💲 paid · — not available · ? unknown. Courses that are offered in several ways (for example a university course and its MOOC) are listed once, with all their offerings.
+*Free online* lists the materials that are freely available for each resource; open the details under each table for the source of every item and for paid or partial materials. A course offered in several ways (for example a university course and its MOOC) is listed once; the other ways are in the last column.
 
 ## Contents
 
@@ -22,22 +22,20 @@ Availability: ✅ free and complete · ◐ partial · 💲 paid · — not avail
 
 Courses with public lecture material (slides, notes, videos or assignments).
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Autonomous Mobile Robots](https://asl.ethz.ch/education/lectures/autonomous_mobile_robots/spring-2021.html)<br><sub>ETH Zurich (Autonomous Systems Lab)</sub> | 2021 | 💲 | ✅ | — | ✅ | ✅ | ✅ | ✅ | CoppeliaSim (formerly V-REP), MATLAB | Kinematics, Sensors, Perception and vision, Estimation and filtering, Localization, Mapping and SLAM, Motion planning |
-| [Principles of Robot Autonomy I (AA 174A / AA 274A)](https://stanfordasl.github.io/PoRA-I/aa174a_aut2526/)<br><sub>Stanford University (Autonomous Systems Lab)</sub> | 2025 | — | ✅ | ✅ | ◐ | ◐ | ◐ | ◐ | ROS 2, Python | Kinematics, Control, Motion planning, Sensors, Perception and vision, Estimation and filtering, Localization, Mapping and SLAM, Robot learning (RL, imitation, foundation models), ROS |
-| [Introduction to Robotics (CS 223A)](https://see.stanford.edu/Course/CS223A)<br><sub>Stanford University</sub> | 2008 | 💲 | — | ✅ | ✅ | ✅ | — | — |  | Kinematics, Dynamics, Control, Motion planning |
-| [Introduction to Robotics and Perception (CS 3630)](https://dellaert.github.io/25F-3630/schedule.html)<br><sub>Georgia Tech</sub> | 2025 | ✅ | ✅ | ✅ | — | ◐ | — | ✅ | Python, GTSAM | Kinematics, Perception and vision, Estimation and filtering, Localization, Mapping and SLAM, Motion planning, Robot learning (RL, imitation, foundation models), Aerial robots, Autonomous driving |
-| [Introduction to Robotics (CSCI 3302)](https://introduction-to-autonomous-robots.github.io/csci3302.html)<br><sub>University of Colorado Boulder</sub> | 2022 | ✅ | ? | ✅ | ✅ | 💲 | — | ◐ | Webots, Python | Kinematics, Sensors, Localization, Mapping and SLAM, Motion planning, Architectures and behaviours, Robot learning (RL, imitation, foundation models) |
-| [Introduction to Robotics (Hanze)](https://drive.google.com/drive/folders/1JfLwLR_FMLuedeSI55oBdiNAt0H76jtr?usp=sharing)<br><sub>Hanze University of Applied Sciences</sub> | 2024 | ✅ | ✅ | — | — | ✅ | — | ✅ | Webots, Python | Architectures and behaviours, Kinematics, Sensors, Perception and vision, Localization, Control, Motion planning |
-| [Introduction to Robotics (MAE 345 / ECE 345 / COS 346)](https://irom-lab.princeton.edu/intro-to-robotics/)<br><sub>Princeton University</sub> | 2026 | — | ✅ | ✅ | ◐ | ✅ | — | ✅ | Crazyflie (Bitcraze), Python | Kinematics, Control, Perception and vision, Estimation and filtering, Motion planning, Robot learning (RL, imitation, foundation models), Aerial robots |
-| [Robotic Manipulation (6.4210 / 6.4212)](https://manipulation.csail.mit.edu/Fall2025/)<br><sub>MIT</sub> | 2025 | ✅ | ? | ✅ | ✅ | ✅ | — | ✅ | Drake, Python | Manipulation, Kinematics, Perception and vision, Motion planning, Control, Robot learning (RL, imitation, foundation models) |
-| [Underactuated Robotics (6.832)](https://underactuated.mit.edu/)<br><sub>MIT</sub> | 2024 | ✅ | — | ✅ | ✅ | ✅ | — | ✅ | Drake, Python | Dynamics, Control, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [Mobile Robot Algorithms Laboratory (16-362)](https://mral-cmu.github.io)<br><sub>Carnegie Mellon University</sub> | 2026 | — | ✅ | — | — | ◐ | — | ◐ | Python | Dynamics, Control, Estimation and filtering, Mapping and SLAM, Motion planning, Aerial robots |
-| [Introduction to Robotics (16-311)](https://www.cs.cmu.edu/~16311/s25/schedule/scheduleindex.html)<br><sub>Carnegie Mellon University</sub> | 2025 | — | ◐ | ◐ | — | ✅ | — | — |  | Kinematics, Control, Sensors, Localization, Motion planning |
-| [Computational Aspects of Robotics (COMS 4733)](https://robopil.github.io/coms4733)<br><sub>Columbia University</sub> | 2025 | — | — | — | — | — | — | — |  | Kinematics, Dynamics, Motion planning, Control, Perception and vision, Mapping and SLAM, Robot learning (RL, imitation, foundation models) |
-| [Self-Driving Cars with Duckietown](https://duckietown.com/mooc/)<br><sub>ETH Zurich, Université de Montréal, TTIC (Duckietown)</sub> | 2025 | — | ? | ✅ | ✅ | ✅ | — | ✅ | ROS (1), Python | Perception and vision, Kinematics, Localization, Control, Motion planning, Robot learning (RL, imitation, foundation models), Autonomous driving, ROS |
-| [Autonomous Systems (lecture outline)](https://mv.rptu.de/fgs/mec/teaching/lectures/autonomous-systems)<br><sub>RPTU Kaiserslautern-Landau</sub> |  | — | — | — | — | — | — | — |  | Architectures and behaviours, Sensors, Localization, Motion planning, Control |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Autonomous Mobile Robots](https://asl.ethz.ch/education/lectures/autonomous_mobile_robots/spring-2021.html)**<br><sub>ETH Zurich (Autonomous Systems Lab), 2021</sub> | slides, video, exercises, solutions, code | [Siegwart et al.](https://bookshop.org/p/books/introduction-to-autonomous-mobile-robots-second-edition-davide-scaramuzza/a2f4851c1824469c) | CoppeliaSim, MATLAB | [ETH lecture page, spring 2020](https://asl.ethz.ch/education/lectures/autonomous_mobile_robots/spring-2020.html)<br>[edX MOOC AMRx (self-paced)](https://www.edx.org/learn/autonomous-robotics/eth-zurich-autonomous-mobile-robots) |
+| **[Principles of Robot Autonomy I (AA 174A / AA 274A)](https://stanfordasl.github.io/PoRA-I/aa174a_aut2526/)**<br><sub>Stanford University (Autonomous Systems Lab), 2025</sub> | slides, notes<br><sub>partly: video, exercises, solutions, code</sub> |  | ROS 2 | [AA 274A, autumn 2025](https://stanfordasl.github.io/PoRA-I/aa274a_aut2526)<br>[AA 174A, autumn 2024 (slides, notes, notebooks)](https://stanfordasl.github.io/PoRA-I/aa174a_aut2425) |
+| **[Introduction to Robotics (CS 223A)](https://see.stanford.edu/Course/CS223A)**<br><sub>Stanford University, 2008</sub> | notes, video, exercises | [Siciliano et al.](https://link.springer.com/book/10.1007/978-1-84628-642-1) |  | [Current course page (winter 2026, materials on Canvas)](https://cs.stanford.edu/groups/manips/teaching/cs223a) |
+| **[Introduction to Robotics and Perception (CS 3630)](https://dellaert.github.io/25F-3630/schedule.html)**<br><sub>Georgia Tech, 2025</sub> | book, slides, notes, code<br><sub>partly: exercises</sub> | [Dellaert & Hutchinson](https://www.roboticsbook.org/intro.html) | GTSAM | [Fall 2022 site](https://dellaert.github.io/22F-3630/schedule.html) |
+| **[Introduction to Robotics (CSCI 3302)](https://introduction-to-autonomous-robots.github.io/csci3302.html)**<br><sub>University of Colorado Boulder, 2022</sub> | book, notes, video<br><sub>partly: code</sub> | [Correll et al.](https://introduction-to-autonomous-robots.github.io) | Webots | [Coursera specialization 'Introduction to Robotics with Webots' (3 courses)](https://www.coursera.org/specializations/introduction-robotics-webots)<br>[YouTube lecture playlist](https://www.youtube.com/playlist?list=PLJafQ8U0gQVXVSg9_AjS1ZhT2E0FbPy2F) |
+| **[Introduction to Robotics (Hanze)](https://drive.google.com/drive/folders/1JfLwLR_FMLuedeSI55oBdiNAt0H76jtr?usp=sharing)**<br><sub>Hanze University of Applied Sciences, 2024</sub> | book, slides, exercises, code | [Elements of Robotics](https://link.springer.com/book/10.1007/978-3-319-62533-1) | Webots | [Robotics Simulation Labs](https://felipenmartins.github.io/Robotics-Simulation-Labs/) |
+| **[Introduction to Robotics (MAE 345 / ECE 345 / COS 346)](https://irom-lab.princeton.edu/intro-to-robotics/)**<br><sub>Princeton University, 2026</sub> | slides, notes, exercises, code<br><sub>partly: video</sub> |  | Crazyflie | [YouTube lecture videos (2026, posted weekly)](https://www.youtube.com/@intro-to-robotics)<br>[Assignments on GitHub](https://github.com/Princeton-Introduction-to-Robotics) |
+| **[Robotic Manipulation (6.4210 / 6.4212)](https://manipulation.csail.mit.edu/Fall2025/)**<br><sub>MIT, 2025</sub> | book, notes, video, exercises, code | [Robotic Manipulation (book)](https://manipulation.mit.edu) | Drake | [MIT OpenCourseWare, fall 2022 (lecture videos)](https://ocw.mit.edu/courses/6-4210-robotic-manipulation-fall-2022) |
+| **[Underactuated Robotics (6.832)](https://underactuated.mit.edu/)**<br><sub>MIT, 2024</sub> | book, notes, video, exercises, code | [Underactuated Robotics (book)](https://underactuated.mit.edu/) | Drake |  |
+| **[Mobile Robot Algorithms Laboratory (16-362)](https://mral-cmu.github.io)**<br><sub>Carnegie Mellon University, 2026</sub> | slides<br><sub>partly: exercises, code</sub> |  | Python |  |
+| **[Introduction to Robotics (16-311)](https://www.cs.cmu.edu/~16311/s25/schedule/scheduleindex.html)**<br><sub>Carnegie Mellon University, 2025</sub> | exercises<br><sub>partly: slides, notes</sub> |  |  |  |
+| **[Self-Driving Cars with Duckietown](https://duckietown.com/mooc/)**<br><sub>ETH Zurich, Université de Montréal, TTIC (Duckietown), 2025</sub> | notes, video, exercises, code |  | ROS 1 | [Instructor manual and curricula](https://docs.duckietown.com/ente/instructor-manual/curricula/mooc/index.html) |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 
@@ -126,12 +124,6 @@ Courses with public lecture material (slides, notes, videos or assignments).
 - Materials: Book: not available; Slides: partial (lecture notes linked as they are released); Notes: partial; Video: not available; Exercises: free (homework PDFs); Solutions: not available; Code: not available
 - Undergraduate introduction with hardware labs; homework handouts are public.
 
-**Computational Aspects of Robotics (COMS 4733)** — Y. Li (Columbia University)
-
-- Offering: [Course site, fall 2025](https://robopil.github.io/coms4733) — free
-- Materials: Book: not available; Slides: not available; Notes: not available; Video: not available; Exercises: not available; Solutions: not available; Code: not available
-- Syllabus only. Useful as a modern topic list that ends with imitation learning and vision-language-action models.
-
 **Self-Driving Cars with Duckietown** — A. Censi, L. Paull, J. Tani, M. Walter et al. (ETH Zurich, Université de Montréal, TTIC (Duckietown))
 
 - Offering: [edX MOOC (2025 edition, with virtual Duckiebots)](https://duckietown.com/mooc/) — free
@@ -139,26 +131,20 @@ Courses with public lecture material (slides, notes, videos or assignments).
 - Materials: Book: not available; Slides: unknown; Notes: free (Duckietown documentation); Video: free (edX MOOC; YouTube preview); Exercises: free (exercises in simulation, on virtual or real Duckiebots); Solutions: not available; Code: free (open-source Duckietown stack)
 - Hands-on autonomous driving with small robots; hardware optional since 2025 (virtual Duckiebots).
 
-**Autonomous Systems (lecture outline)** —  (RPTU Kaiserslautern-Landau)
-
-- Offering: [Lecture page](https://mv.rptu.de/fgs/mec/teaching/lectures/autonomous-systems) — free
-- Materials: Book: not available; Slides: not available; Notes: not available; Video: not available; Exercises: not available; Solutions: not available; Code: not available
-- Content outline only; materials are not public.
-
 </details>
 
 ## MOOCs and short online courses
 
 Self-paced online courses that are not part of a university course listed above.
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Modern Robotics](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)<br><sub>Northwestern University</sub> | 2017 | ✅ | — | ✅ | ✅ | ✅ | ◐ | ✅ | CoppeliaSim (formerly V-REP), Python, MATLAB | Kinematics, Dynamics, Motion planning, Control, Manipulation |
-| [Self-Driving Cars Specialization](https://www.coursera.org/specializations/self-driving-cars)<br><sub>University of Toronto (Coursera)</sub> | 2019 | — | — | — | 💲 | 💲 | — | 💲 | CARLA, Python | Estimation and filtering, Localization, Perception and vision, Motion planning, Control, Autonomous driving |
-| [Robotics Specialization](https://www.coursera.org/learn/robotics-flight)<br><sub>University of Pennsylvania (Coursera)</sub> | 2016 | — | — | — | ✅ | 💲 | — | 💲 | MATLAB | Aerial robots, Motion planning, Kinematics, Perception and vision, Estimation and filtering, Robot learning (RL, imitation, foundation models) |
-| [A Beginner's Guide to Autonomous Robots](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-35+V1)<br><sub>NVIDIA Deep Learning Institute</sub> |  | — | — | — | ✅ | — | — | — |  | Architectures and behaviours, Sensors, Perception and vision, Localization, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [AI for Autonomous Vehicles and Robotics](https://www.coursera.org/learn/ai-for-autonomous-vehicles-and-robotics)<br><sub>University of Michigan (Coursera)</sub> |  | — | — | — | ✅ | 💲 | — | — |  | Robot learning (RL, imitation, foundation models), Perception and vision, Autonomous driving |
-| [Artificial Intelligence for Robotics](https://www.coursera.org/learn/packt-artificial-intelligence-for-robotics)<br><sub>Packt (Coursera)</sub> |  | — | — | — | 💲 | 💲 | — | 💲 | ROS 2, Python | Robot learning (RL, imitation, foundation models), Perception and vision, Motion planning, ROS |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Modern Robotics](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)**<br><sub>Northwestern University, 2017</sub> | book, notes, video, exercises, code<br><sub>partly: solutions</sub> | [Modern Robotics (book)](https://hades.mech.northwestern.edu/index.php/Modern_Robotics) | CoppeliaSim, MATLAB | [Coursera specialization (6 courses)](https://www.coursera.org/specializations/modernrobotics) |
+| **[Self-Driving Cars Specialization](https://www.coursera.org/specializations/self-driving-cars)**<br><sub>University of Toronto (Coursera), 2019</sub> | — |  | CARLA |  |
+| **[Robotics Specialization](https://www.coursera.org/learn/robotics-flight)**<br><sub>University of Pennsylvania (Coursera), 2016</sub> | video |  | MATLAB | [Class Central overview of the specialization](https://classcentral.com/course/robotics-18626) |
+| **[A Beginner's Guide to Autonomous Robots](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-OV-35+V1)**<br><sub>NVIDIA Deep Learning Institute</sub> | video |  |  |  |
+| **[AI for Autonomous Vehicles and Robotics](https://www.coursera.org/learn/ai-for-autonomous-vehicles-and-robotics)**<br><sub>University of Michigan (Coursera)</sub> | video |  |  |  |
+| **[Artificial Intelligence for Robotics](https://www.coursera.org/learn/packt-artificial-intelligence-for-robotics)**<br><sub>Packt (Coursera)</sub> | — |  | ROS 2 |  |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 
@@ -207,22 +193,22 @@ Self-paced online courses that are not part of a university course listed above.
 
 Textbooks used by the courses above, and other free or open textbooks.
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Introduction to Autonomous Mobile Robots (2nd ed.)](https://bookshop.org/p/books/introduction-to-autonomous-mobile-robots-second-edition-davide-scaramuzza/a2f4851c1824469c)<br><sub>MIT Press</sub> | 2011 | 💲 |  |  |  |  |  |  |  | Kinematics, Sensors, Perception and vision, Localization, Mapping and SLAM, Motion planning |
-| [Introduction to Autonomous Robots](https://introduction-to-autonomous-robots.github.io)<br><sub>MIT Press / open source</sub> | 2022 | ✅ |  |  |  |  |  |  |  | Kinematics, Sensors, Perception and vision, Localization, Mapping and SLAM, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [Robotics, Vision and Control: Fundamental Algorithms in Python (3rd ed.)](https://petercorke.com/rvc3p/home/)<br><sub>Springer</sub> | 2023 | 💲 |  |  |  |  |  | ✅ | Python Robotics Ecosystem (Robotics Toolbox, Spatial Maths, Machine Vision Toolbox, Swift) | Kinematics, Dynamics, Control, Perception and vision, Localization, Mapping and SLAM, Motion planning |
-| [Introduction to Robotics and Perception](https://www.roboticsbook.org/intro.html)<br><sub>Georgia Tech (online, draft)</sub> | 2024 | ✅ |  |  |  |  |  | ✅ | GTSAM, Python | Kinematics, Perception and vision, Estimation and filtering, Localization, Mapping and SLAM, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [Elements of Robotics](https://link.springer.com/book/10.1007/978-3-319-62533-1)<br><sub>Springer (open access)</sub> | 2018 | ✅ |  |  |  |  |  |  |  | Architectures and behaviours, Sensors, Kinematics, Control, Localization, Mapping and SLAM, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)<br><sub>Cambridge University Press</sub> | 2017 | ✅ |  |  | ✅ |  |  | ✅ |  | Kinematics, Dynamics, Motion planning, Control, Manipulation |
-| [Probabilistic Robotics](https://robots.stanford.edu/probabilistic-robotics/)<br><sub>MIT Press</sub> | 2005 | 💲 |  |  |  |  |  |  |  | Estimation and filtering, Localization, Mapping and SLAM, Motion planning |
-| [State Estimation for Robotics (2nd ed.)](https://asrl.utias.utoronto.ca/~tdb/)<br><sub>Cambridge University Press</sub> | 2024 | ✅ |  |  |  |  |  |  |  | Estimation and filtering, Localization, Mapping and SLAM |
-| [Planning Algorithms](https://lavalle.pl/planning/)<br><sub>Cambridge University Press</sub> | 2006 | ✅ |  |  |  |  |  |  |  | Motion planning |
-| [Robotic Systems (draft)](https://motion.cs.illinois.edu/RoboticSystems/)<br><sub>University of Illinois</sub> | 2024 | ✅ |  |  |  |  |  | ✅ |  | Kinematics, Dynamics, Control, Motion planning, Perception and vision, Robot learning (RL, imitation, foundation models) |
-| [Robotic Manipulation: Perception, Planning, and Control](https://manipulation.mit.edu)<br><sub>MIT (online)</sub> |  | ✅ |  |  |  |  |  | ✅ | Drake | Manipulation, Perception and vision, Motion planning, Control, Robot learning (RL, imitation, foundation models) |
-| [Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation](https://underactuated.mit.edu/)<br><sub>MIT (online)</sub> | 2024 | ✅ |  |  |  |  |  | ✅ | Drake | Dynamics, Control, Motion planning, Robot learning (RL, imitation, foundation models) |
-| [Robotics: Modelling, Planning and Control](https://link.springer.com/book/10.1007/978-1-84628-642-1)<br><sub>Springer</sub> | 2009 | 💲 |  |  |  |  |  |  |  | Kinematics, Dynamics, Control, Motion planning |
-| [Foundations of Robotics (course notes)](https://rpal.cs.cornell.edu/foundations)<br><sub>Cornell University</sub> |  | ✅ |  |  |  |  |  |  |  | Kinematics, Dynamics, Control, Estimation and filtering |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Introduction to Autonomous Mobile Robots (2nd ed.)](https://bookshop.org/p/books/introduction-to-autonomous-mobile-robots-second-edition-davide-scaramuzza/a2f4851c1824469c)**<br><sub>MIT Press, 2011</sub> | — |  |  |  |
+| **[Introduction to Autonomous Robots](https://introduction-to-autonomous-robots.github.io)**<br><sub>MIT Press / open source, 2022</sub> | book |  |  | [Source and releases on GitHub](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots/releases)<br>[Open Textbook Library](https://open.umn.edu/opentextbooks/textbooks/316) |
+| **[Robotics, Vision and Control: Fundamental Algorithms in Python (3rd ed.)](https://petercorke.com/rvc3p/home/)**<br><sub>Springer, 2023</sub> | code |  | Robotics Toolbox (Python) | [Springer](https://link.springer.com/book/10.1007/978-3-031-06469-2)<br>[Code and notebooks for every chapter](https://github.com/petercorke/RVC3-python) |
+| **[Introduction to Robotics and Perception](https://www.roboticsbook.org/intro.html)**<br><sub>Georgia Tech (online, draft), 2024</sub> | book, code |  | GTSAM | [Notebooks on GitHub](https://github.com/gtbook/robotics) |
+| **[Elements of Robotics](https://link.springer.com/book/10.1007/978-3-319-62533-1)**<br><sub>Springer (open access), 2018</sub> | book |  |  |  |
+| **[Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)**<br><sub>Cambridge University Press, 2017</sub> | book, video, code |  |  |  |
+| **[Probabilistic Robotics](https://robots.stanford.edu/probabilistic-robotics/)**<br><sub>MIT Press, 2005</sub> | — |  |  |  |
+| **[State Estimation for Robotics (2nd ed.)](https://asrl.utias.utoronto.ca/~tdb/)**<br><sub>Cambridge University Press, 2024</sub> | book |  |  |  |
+| **[Planning Algorithms](https://lavalle.pl/planning/)**<br><sub>Cambridge University Press, 2006</sub> | book |  |  |  |
+| **[Robotic Systems (draft)](https://motion.cs.illinois.edu/RoboticSystems/)**<br><sub>University of Illinois, 2024</sub> | book, code |  |  |  |
+| **[Robotic Manipulation: Perception, Planning, and Control](https://manipulation.mit.edu)**<br><sub>MIT (online)</sub> | book, code |  | Drake |  |
+| **[Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation](https://underactuated.mit.edu/)**<br><sub>MIT (online), 2024</sub> | book, code |  | Drake |  |
+| **[Robotics: Modelling, Planning and Control](https://link.springer.com/book/10.1007/978-1-84628-642-1)**<br><sub>Springer, 2009</sub> | — |  |  |  |
+| **[Foundations of Robotics (course notes)](https://rpal.cs.cornell.edu/foundations)**<br><sub>Cornell University</sub> | book |  |  |  |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 
@@ -329,10 +315,10 @@ Textbooks used by the courses above, and other free or open textbooks.
 
 Video collections that are not tied to a single course above.
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Robot Academy](https://petercorke.com/resources/robot-academy/)<br><sub>Queensland University of Technology</sub> | 2017 |  |  |  | ✅ |  |  |  |  | Kinematics, Dynamics, Control, Perception and vision |
-| [Lectures of Cyrill Stachniss (Robot Mapping, Mobile Sensing and Robotics, Self-Driving Cars)](https://www.ipb.uni-bonn.de/teaching)<br><sub>University of Bonn</sub> | 2021 |  | ◐ |  | ✅ | ◐ |  |  |  | Estimation and filtering, Localization, Mapping and SLAM, Perception and vision, Autonomous driving |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Robot Academy](https://petercorke.com/resources/robot-academy/)**<br><sub>Queensland University of Technology, 2017</sub> | video | [Robotics, Vision and Control](https://petercorke.com/rvc3p/home/) |  |  |
+| **[Lectures of Cyrill Stachniss (Robot Mapping, Mobile Sensing and Robotics, Self-Driving Cars)](https://www.ipb.uni-bonn.de/teaching)**<br><sub>University of Bonn, 2021</sub> | video<br><sub>partly: slides, exercises</sub> | [Probabilistic Robotics](https://robots.stanford.edu/probabilistic-robotics/) |  | [Robot Mapping (slides and videos)](https://www.ipb.uni-bonn.de/robot-mapping/)<br>[Robot Mapping YouTube playlist](https://www.youtube.com/playlist?list=PLgnQpQtFTOGQrZ4O5QzbIHgl3b1JHimN_)<br>[Mobile Sensing and Robotics II (2021)](https://www.ipb.uni-bonn.de/msr2-2021/index.html)<br>[Techniques for Self-Driving Cars](https://www.ipb.uni-bonn.de/sdc-2021/index.html) |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 
@@ -360,11 +346,11 @@ Video collections that are not tied to a single course above.
 
 Ready-to-use exercises, labs and Jupyter notebooks.
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Robotics Simulation Labs and Mobile Robot Control notebooks](https://github.com/felipenmartins/Robotics-Simulation-Labs)<br><sub>Hanze University of Applied Sciences</sub> |  |  |  |  |  | ✅ |  | ✅ | Webots, Python | Architectures and behaviours, Perception and vision, Localization, Control, Motion planning |
-| [Jupyter notebooks for robotics courses](https://github.com/jotaraul/jupyter-notebooks-for-robotics-courses)<br><sub>University of Málaga (MAPIR)</sub> |  |  |  |  |  | ✅ |  | ✅ | Python | Kinematics, Sensors, Localization, Mapping and SLAM, Motion planning |
-| [Introduction to Robotics with Drones (Duckiedrone)](https://docs.duckietown.com/ente/course-intro-to-drones/intro.html)<br><sub>Duckietown</sub> |  |  |  | ✅ |  | ✅ |  |  |  | Sensors, Control, Estimation and filtering, Localization, Mapping and SLAM, Aerial robots |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Robotics Simulation Labs and Mobile Robot Control notebooks](https://github.com/felipenmartins/Robotics-Simulation-Labs)**<br><sub>Hanze University of Applied Sciences</sub> | exercises, code |  | Webots | [Mobile Robot Control notebooks](https://github.com/felipenmartins/Mobile-Robot-Control) |
+| **[Jupyter notebooks for robotics courses](https://github.com/jotaraul/jupyter-notebooks-for-robotics-courses)**<br><sub>University of Málaga (MAPIR)</sub> | exercises, code |  | Python |  |
+| **[Introduction to Robotics with Drones (Duckiedrone)](https://docs.duckietown.com/ente/course-intro-to-drones/intro.html)**<br><sub>Duckietown</sub> | notes, exercises |  |  |  |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 
@@ -394,14 +380,14 @@ Ready-to-use exercises, labs and Jupyter notebooks.
 
 Courses and tutorials on learning-based robotics, and introductions to physical and embodied AI.
 
-| Resource | Year | Book | Slides | Notes | Video | Exercises | Solutions | Code | Software | Topics |
-|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|---|
-| [Principles of Robot Autonomy II (CS 237B)](https://web.stanford.edu/class/cs237b/)<br><sub>Stanford University</sub> | 2025 | — | ✅ | ✅ | — | ◐ | — | ◐ | Python, ROS 2 | Robot learning (RL, imitation, foundation models), Manipulation, Perception and vision, Control |
-| [Hugging Face Robotics Course](https://huggingface.co/learn/robotics-course)<br><sub>Hugging Face</sub> | 2025 |  |  | ◐ |  |  |  | ✅ | LeRobot | Robot learning (RL, imitation, foundation models), Kinematics |
-| [Robot Learning: A Tutorial](https://huggingface.co/spaces/lerobot/robot-learning-tutorial)<br><sub>Hugging Face</sub> | 2025 |  |  | ✅ |  |  |  | ✅ | LeRobot | Robot learning (RL, imitation, foundation models) |
-| [Robot Learning (CS 4756 / 5756)](https://www.cs.cornell.edu/courses/cs4756/2026sp/)<br><sub>Cornell University</sub> | 2026 |  | ✅ |  |  | ✅ |  | ✅ | Python | Robot learning (RL, imitation, foundation models), Control, Perception and vision |
-| [Embodied AI (CS 539)](https://web.engr.oregonstate.edu/~leestef/courses/2019/fall/cs539.html)<br><sub>Oregon State University</sub> | 2019 |  | ✅ |  |  |  |  |  |  | Robot learning (RL, imitation, foundation models), Perception and vision |
-| [What is physical AI? Introductory articles](https://towardsdatascience.com/physical-ai-what-it-is-and-what-it-is-not/)<br><sub></sub> | 2025 |  |  | ✅ |  |  |  |  |  | Robot learning (RL, imitation, foundation models) |
+| Resource | Free online | Textbook | Software | Other ways to take it |
+|---|---|---|---|---|
+| **[Principles of Robot Autonomy II (CS 237B)](https://web.stanford.edu/class/cs237b/)**<br><sub>Stanford University, 2025</sub> | slides, notes<br><sub>partly: exercises, code</sub> |  | ROS 2 |  |
+| **[Hugging Face Robotics Course](https://huggingface.co/learn/robotics-course)**<br><sub>Hugging Face, 2025</sub> | code<br><sub>partly: notes</sub> |  | LeRobot |  |
+| **[Robot Learning: A Tutorial](https://huggingface.co/spaces/lerobot/robot-learning-tutorial)**<br><sub>Hugging Face, 2025</sub> | notes, code |  | LeRobot | [arXiv 2510.12403](https://arxiv.org/abs/2510.12403) |
+| **[Robot Learning (CS 4756 / 5756)](https://www.cs.cornell.edu/courses/cs4756/2026sp/)**<br><sub>Cornell University, 2026</sub> | slides, exercises, code |  | Python |  |
+| **[Embodied AI (CS 539)](https://web.engr.oregonstate.edu/~leestef/courses/2019/fall/cs539.html)**<br><sub>Oregon State University, 2019</sub> | slides |  |  |  |
+| **[What is physical AI? Introductory articles](https://towardsdatascience.com/physical-ai-what-it-is-and-what-it-is-not/)**<br><sub>2025</sub> | notes |  |  | [A beginner's guide to physical AI](https://tacticzhazel.substack.com/p/a-beginners-guide-to-physical-ai)<br>[HumynLabs: What is physical AI (robotics, embodied AI)](https://humynlabs.ai/blog/what-is-physical-ai-robotics-embodied-ai-explained)<br>[Universal Robots webinar: physical AI](https://video.universal-robots.com/discover-how-physical-ai-is-1) |
 
 <details><summary>Details: offerings, sources of each material, notes</summary>
 

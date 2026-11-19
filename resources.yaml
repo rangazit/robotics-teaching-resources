@@ -351,26 +351,6 @@ resources:
     code: {status: none}
   note: Undergraduate introduction with hardware labs; homework handouts are public.
 
-- id: columbia-coms4733
-  group: course
-  name: Computational Aspects of Robotics (COMS 4733)
-  institution: Columbia University
-  people: Y. Li
-  level: intro
-  year: 2025
-  topics: [kinematics, dynamics, planning, control, perception, slam, learning]
-  offerings:
-    - {name: "Course site, fall 2025", url: "https://robopil.github.io/coms4733", year: 2025, cost: free}
-  materials:
-    book: {status: none}
-    slides: {status: none}
-    notes: {status: none}
-    video: {status: none}
-    exercises: {status: none}
-    solutions: {status: none}
-    code: {status: none}
-  note: Syllabus only. Useful as a modern topic list that ends with imitation learning and vision-language-action models.
-
 - id: duckietown-mooc
   short: "Duckietown MOOC"
   group: course
@@ -393,24 +373,6 @@ resources:
     code: {status: free, via: "open-source Duckietown stack"}
   uses_software: [ros, python]
   note: Hands-on autonomous driving with small robots; hardware optional since 2025 (virtual Duckiebots).
-
-- id: rptu-autsys
-  group: course
-  name: Autonomous Systems (lecture outline)
-  institution: RPTU Kaiserslautern-Landau
-  level: intro
-  topics: [architectures, sensors, localization, planning, control]
-  offerings:
-    - {name: "Lecture page", url: "https://mv.rptu.de/fgs/mec/teaching/lectures/autonomous-systems", cost: free}
-  materials:
-    book: {status: none}
-    slides: {status: none}
-    notes: {status: none}
-    video: {status: none}
-    exercises: {status: none}
-    solutions: {status: none}
-    code: {status: none}
-  note: Content outline only; materials are not public.
 
 # ============================================================== MOOCs
 - id: modern-robotics
